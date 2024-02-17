@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f7a670-8a67-4143-b2ed-550661d48a65" name="Changes" comment="Test">
-      <change beforePath="$PROJECT_DIR$/src/administrator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/media" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/site" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/language/en-GB/en-GB.plg_system_ytcontact.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/language/en-GB/en-GB.plg_system_ytcontact.sys.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/realestate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/LoadSourceTypes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/SourceListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/TemplateListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/fieldsHelper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/fieldsHelperChatGPT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +62,7 @@
       <updated>1708178855547</updated>
       <workItem from="1708178856838" duration="765000" />
       <workItem from="1708185996113" duration="996000" />
+      <workItem from="1708195007924" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1708193792720</created>
