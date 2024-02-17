@@ -8,7 +8,7 @@
   <copyright>[COPYRIGHT]</copyright>
   <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
   <version>[VERSION]</version>
-  <description>PLG_YTDATASET_XML_DESCRIPTION</description>
+  <description>PLG_YTDATASET_XML_DESCRIPTION_LABEL</description>
   <namespace path="src">Joomla\Plugin\System\Ytimmoscout</namespace>
 
   <!-- Language files -->
