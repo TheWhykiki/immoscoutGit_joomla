@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<config>
+    <inlinehelp button="show"/>
+	<fieldset
+		name="component"
+		label="COM_VMMIMMOSCOUT_CONFIG_SETTINGS_LABEL"
+	>
+		<field
+			name="oauth_consumer_key"
+			type="text"
+			label="COM_VMMIMMOSCOUT_OAUTH_CONSUMERKEY_LABEL"
+			default="CustomConsumerKey"
+			required="true"
+			>
+		</field>
+
+		<field
+			name="oauth_consumer_secret"
+			type="text"
+			label="COM_VMMIMMOSCOUT_OAUTH_CONSUMERSECRET_LABEL"
+			default="SecretHash"
+			required="true"
+			>
+		</field>
+
+		<field
+			name="oauth_token"
+			type="text"
+			label="COM_VMMIMMOSCOUT_OAUTH_TOKEN_LABEL"
+			default="TokenValue"
+			required="true"
+			>
+
+		</field>
+
+		<field
+			name="token_secret"
+			type="text"
+			label="COM_VMMIMMOSCOUT_TOKEN_SECRET_LABEL"
+			default="TokenSecret"
+			required="true"
+			>
+
+		</field>
+
+		<field
+			name="oauth_verifier"
+			type="text"
+			label="COM_VMMIMMOSCOUT_OAUTH_VERIFIER_LABEL"
+			default="TokenValue"
+			required="true"
+			>
+		</field>
+
+	</fieldset>
+
+    <fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			validate="rules"
+			filter="rules"
+			component="com_vmmimmoscout"
+			section="component"
+		/>
+	</fieldset>
+</config>

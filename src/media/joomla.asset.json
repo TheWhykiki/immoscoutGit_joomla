@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_vmmimmoscout",
+  "version": "4.0.0",
+  "description": "Joomla CMS",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+	{
+      "name": "com_vmmimmoscout.script",
+      "type": "script",
+      "uri": "com_vmmimmoscout/script.js"
+    },
+    {
+      "name": "com_vmmimmoscout.admin-realestates-modal",
+      "type": "script",
+      "uri": "com_vmmimmoscout/admin-realestates-modal.js",
+      "attributes": {
+        "type": "module"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="COM_VMMIMMOSCOUT_REALESTATES_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_VMMIMMOSCOUT_REALESTATES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="advanced" label="JGLOBAL_LIST_LAYOUT_OPTIONS">
+
+			<field
+					name="realestate_pagesize"
+					type="text"
+					label="COM_VMMIMMOSCOUT_REALESTATE_PAGESIZE_MENU_LABEL"
+					default="5"
+					filter="INT"
+					required="true"
+			>
+
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

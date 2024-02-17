@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+	<name>com_vmmimmoscout</name>
+	<author>Whykiki</author>
+	<creationDate>February 2024</creationDate>
+	<copyright>Copyright (C) 2024 Whykiki. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>cs@villaester.de</authorEmail>
+	<authorUrl>https://villaester.de</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_VMMIMMOSCOUT_XML_DESCRIPTION</description>
+    <namespace path="src">VmmimmoscoutNamespace\Component\Vmmimmoscout</namespace>
+
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<media destination="com_vmmimmoscout" folder="media">
+		<filename>index.html</filename>
+        <filename>joomla.asset.json</filename>
+		<folder>css</folder>
+        <folder>images</folder>
+		<folder>js</folder>
+		<folder>scss</folder>
+	</media>
+
+	<files folder="site">
+		<folder>forms</folder>
+        <folder>helpers</folder>
+		<folder>layouts</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="site/language">
+
+			<language tag="de-DE">de-DE/com_vmmimmoscout.ini</language>
+			<language tag="en-GB">en-GB/com_vmmimmoscout.ini</language>
+
+	</languages>
+
+	<administration>
+        <menu img="class:comment">
+			COM_VMMIMMOSCOUT		</menu>
+		<submenu>
+			<menu view="dashboard">
+                COM_VMMIMMOSCOUT_SUBMENU_DASHBOARD
+
+            </menu>
+
+		</submenu>
+
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>vmmimmoscout.xml</filename>
+			<folder>sql</folder>
+            <folder>forms</folder>
+            <folder>services</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+			<folder>misc</folder>
+		</files>
+
+		<languages folder="administrator/language">
+
+			<language tag="de-DE">de-DE/com_vmmimmoscout.ini</language>
+			<language tag="de-DE">de-DE/com_vmmimmoscout.sys.ini</language>
+
+			<language tag="en-GB">en-GB/com_vmmimmoscout.ini</language>
+			<language tag="en-GB">en-GB/com_vmmimmoscout.sys.ini</language>
+
+		</languages>
+	</administration>
+
+
+</extension>
