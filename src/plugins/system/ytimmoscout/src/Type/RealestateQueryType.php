@@ -49,15 +49,14 @@
 
             // Get the FieldsModelField, we need it in a sec
             $mvcFactory = $app->bootComponent('com_vmmimmoscout')->getMVCFactory();
+
             /** @var \VmmimmoscoutNamespace\Component\Vmmimmoscout\Site\Model\RealestatesModel $realestatesModel */
             $realestatesModel = $mvcFactory->createModel('Realestate', 'Site', ['ignore_request' => true]);
             $realestate = $realestatesModel->getItem($id);
 
             $realestateRemapped = FieldsHelper::setFieldMappings($realestate);
 
-            var_dump($realestateRemapped);
-
-            return $realestateRemapped[0];
+            return $realestateRemapped;
 
         }
 
