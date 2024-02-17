@@ -18,8 +18,4 @@ use Joomla\CMS\Language\Text;
 $wa = $this->document->getWebAssetManager();
 $wa->useScript('com_vmmimmoscout.script');
 
-
-echo '<pre>';
-var_dump($this->item);
-echo '</pre>';
 ?>
