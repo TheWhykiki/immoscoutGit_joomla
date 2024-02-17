@@ -75,10 +75,10 @@ class RealestateType
                         'value' => '',
                     ],
                 ],
-                'postcode' => [
+                'zipCode' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Postcode',
+                        'label' => 'PLZ',
                         'value' => '',
                     ],
                 ],
@@ -138,13 +138,6 @@ class RealestateType
                         'value' => '',
                     ],
                 ],
-                'showAddress' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Show Address',
-                        'value' => false,
-                    ],
-                ],
                 'contactId' => [
                     'type' => 'String',
                     'metadata' => [
@@ -184,6 +177,13 @@ class RealestateType
                     'type' => 'String',
                     'metadata' => [
                         'label' => 'Longitude',
+                        'value' => null,
+                    ],
+                ],
+                'latlng' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Lat / Lng combined',
                         'value' => null,
                     ],
                 ],
@@ -504,15 +504,6 @@ class RealestateType
                         'value' => '',
                     ],
                 ],
-                'hasCourtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Has Courtage',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
                 'courtage' => [
                     'type' => 'String',
                     'metadata' => [
@@ -547,15 +538,6 @@ class RealestateType
                     'type' => 'String',
                     'metadata' => [
                         'label' => 'Currency',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'hasCourtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Has Courtage',
                         'group' => 'Buy Fields',
                         'filters' => ['limit'],
                         'value' => '',
@@ -901,15 +883,6 @@ class RealestateType
                     'type' => 'String',
                     'metadata' => [
                         'label' => 'Min Divisible',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'hasCourtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Has Courtage',
                         'group' => 'Site Fields',
                         'filters' => ['limit'],
                         'value' => '',
