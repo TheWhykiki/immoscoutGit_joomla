@@ -44,34 +44,35 @@ class RealestateType
 
     public static function config()
     {
+
         return [
             'fields' => [
                 // Generic Fields
                 'externalId' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'External ID',
+                        'label' => 'Anbieterobjektnummer',
                         'value' => '',
                     ],
                 ],
                 'title' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Title',
+                        'label' => 'Exposeüberschrift',
                         'value' => '',
                     ],
                 ],
                 'street' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Street',
+                        'label' => 'Straße',
                         'value' => '',
                     ],
                 ],
                 'houseNumber' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'House Number',
+                        'label' => 'Hausnummer',
                         'value' => '',
                     ],
                 ],
@@ -85,98 +86,98 @@ class RealestateType
                 'city' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'City',
+                        'label' => 'Ort',
                         'value' => '',
                     ],
                 ],
                 'searchField1' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Search Field 1',
+                        'label' => 'API-Suche-Felder',
                         'value' => '',
                     ],
                 ],
                 'searchField2' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Search Field 2',
+                        'label' => 'API-Suche-Felder',
                         'value' => '',
                     ],
                 ],
                 'searchField3' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Search Field 3',
+                        'label' => 'API-Suche-Felder',
                         'value' => '',
                     ],
                 ],
                 'groupNumber' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Group Number',
+                        'label' => 'Objektgruppierung',
                         'value' => '',
                     ],
                 ],
                 'descriptionNote' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Description Note',
+                        'label' => 'Objektbeschreibung',
                         'value' => '',
                     ],
                 ],
                 'locationNote' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Location Note',
+                        'label' => 'Lage',
                         'value' => '',
                     ],
                 ],
                 'otherNote' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Other Note',
+                        'label' => 'Sonstige Angaben',
                         'value' => '',
                     ],
                 ],
                 'contactId' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Contact ID',
+                        'label' => 'Kontaktperson',
                         'value' => '',
                     ],
                 ],
                 'condition' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Condition',
+                        'label' => 'Objektzustand',
                         'value' => '',
                     ],
                 ],
                 'constructionYear' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Construction Year',
+                        'label' => 'Baujahr',
                         'value' => null,
                     ],
                 ],
                 'constructionYearUnknown' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Construction Year Unknown',
+                        'label' => 'Baujahr unbekannt',
                         'value' => false,
                     ],
                 ],
                 'latitude' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Latitude',
+                        'label' => 'Geokoordinaten (Breitengrad)',
                         'value' => null,
                     ],
                 ],
                 'longitude' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Longitude',
+                        'label' => 'Geokoordinaten (Längengrad)',
                         'value' => null,
                     ],
                 ],
@@ -190,25 +191,25 @@ class RealestateType
                 'creationDate' => [
                     'type' => 'String', // or Date depending on how you want to handle dates
                     'metadata' => [
-                        'label' => 'Creation Date',
+                        'label' => 'Expose-Erstellungsdatum',
                         'value' => '',
                     ],
                 ],
                 'lastModificationDate' => [
                     'type' => 'String', // or Date
                     'metadata' => [
-                        'label' => 'Last Modification Date',
+                        'label' => 'Expose-Änderungsdatum',
                         'value' => '',
                     ],
                 ],
 
-                // Apartment Fields
+                // Apartment
 
                 'apartmentType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Apartment Type',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Wohnungskategorie',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -216,8 +217,8 @@ class RealestateType
                 'floor' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Floor',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Etage',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -225,8 +226,8 @@ class RealestateType
                 'lift' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Lift',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Aufzug',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -234,17 +235,8 @@ class RealestateType
                 'cellar' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Cellar',
-                        'group' => 'Apartment Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'handicappedAccessible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Handicapped Accessible',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Keller',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -252,8 +244,8 @@ class RealestateType
                 'numberOfParkingSpaces' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number of Parking Spaces',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Parkflächenanzahl',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -261,8 +253,8 @@ class RealestateType
                 'lastRefurbishment' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Last Refurbishment',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Letzte Modernisierung',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -270,17 +262,8 @@ class RealestateType
                 'interiorQuality' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Interior Quality',
-                        'group' => 'Apartment Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'freeFrom' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Free From',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Qualität der Ausstattung',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -288,17 +271,17 @@ class RealestateType
                 'heatingType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Heating Type',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Heizungsart',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'firingType' => [
+                'firingTypes' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Firing Type',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Befeuerungsarten',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -306,8 +289,8 @@ class RealestateType
                 'BuildingEnergyRatingType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Building Energy Rating Type',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Energieausweistyp',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -315,8 +298,8 @@ class RealestateType
                 'thermalCharacteristic' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Thermal Characteristic',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Energieverbrauchskennwert',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -324,8 +307,44 @@ class RealestateType
                 'energyConsumptionContainsWarmWater' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Energy Consumption Contains Warm Water',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Energieverbrauch enthält Warmwasser',
+                        'group' => 'Apartment',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'energyCertificateCreationDate' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Energieausweis-Erstellungsdatum',
+                        'group' => 'Apartment',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'energyEfficiencyClass' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Energieeffizienzklasse',
+                        'group' => 'Apartment',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'heatingTypeEnev2014' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Heizungsart nach EnEV 2014',
+                        'group' => 'Apartment',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'energySourcesEnev2014' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Energiequellen nach EnEV 2014',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -333,8 +352,8 @@ class RealestateType
                 'numberOfFloors' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number of Floors',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Etagenzahl',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -342,8 +361,8 @@ class RealestateType
                 'usableFloorSpace' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Usable Floor Space',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Nutzfläche',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -351,8 +370,8 @@ class RealestateType
                 'numberOfBedRooms' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number of Bedrooms',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Anzahl Schlafzimmer',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -360,8 +379,8 @@ class RealestateType
                 'numberOfBathRooms' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number of Bathrooms',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Anzahl Badezimmer',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -369,8 +388,8 @@ class RealestateType
                 'guestToilet' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Guest Toilet',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Gäste-WC',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -378,20 +397,20 @@ class RealestateType
                 'parkingSpaceType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Parking Space Type',
-                        'group' => 'Apartment Fields',
+                        'label' => 'Parkplatz',
+                        'group' => 'Apartment',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
 
-                // Rent Fields
+                // Miete (Rent)
 
                 'baseRent' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Base Rent',
-                        'group' => 'Rent Fields',
+                        'label' => 'Kaltmiete',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -399,8 +418,8 @@ class RealestateType
                 'totalRent' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Total Rent',
-                        'group' => 'Rent Fields',
+                        'label' => 'Warmmiete',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -408,8 +427,8 @@ class RealestateType
                 'serviceCharge' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Service Charge',
-                        'group' => 'Rent Fields',
+                        'label' => 'Nebenkosten',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -417,8 +436,8 @@ class RealestateType
                 'deposit' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Deposit',
-                        'group' => 'Rent Fields',
+                        'label' => 'Kaution o. Genossenschaftsanteile',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -426,8 +445,8 @@ class RealestateType
                 'heatingCosts' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Heating Costs',
-                        'group' => 'Rent Fields',
+                        'label' => 'Heizkosten',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -435,8 +454,8 @@ class RealestateType
                 'heatingCostsInServiceCharge' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Heating Costs in Service Charge',
-                        'group' => 'Rent Fields',
+                        'label' => 'Heizkosten sind in Nebenkosten enthalten',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -444,8 +463,8 @@ class RealestateType
                 'petsAllowed' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Pets Allowed',
-                        'group' => 'Rent Fields',
+                        'label' => 'Haustiere',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -453,8 +472,8 @@ class RealestateType
                 'parkingSpacePrice' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Parking Space Price',
-                        'group' => 'Rent Fields',
+                        'label' => 'Stellplatzmiete',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -462,254 +481,8 @@ class RealestateType
                 'livingSpace' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Living Space',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfRooms' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number of Rooms',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'builtInKitchen' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Built-in Kitchen',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'balcony' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Balcony',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'garden' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Garden',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'courtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Courtage',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'courtageNote' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Courtage Note',
-                        'group' => 'Rent Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-
-                // Buy Fields
-
-                'value' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Kaufpreis',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'currency' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Currency',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'courtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Courtage',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'courtageNote' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Courtage Note',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'marketingType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Marketing Type',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'priceIntervalType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Price Interval Type',
-                        'group' => 'Buy Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-
-                // House Fields
-
-                'livingSpace' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Living Space',
-                        'group' => 'House Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'plotArea' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Plot Area',
-                        'group' => 'House Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfRooms' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number of Rooms',
-                        'group' => 'House Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'buildingType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Building Type',
-                        'group' => 'House Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-
-                // Commercial Fields
-
-                'commercializationType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Commercialization Type',
-                        'group' => 'Commercial Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'totalFloorSpace' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Total Floor Space',
-                        'group' => 'Commercial Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'netFloorSpace' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Net Floor Space',
-                        'group' => 'Commercial Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'minDivisible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Min Divisible',
-                        'group' => 'Commercial Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'additionalCosts' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Additional Costs',
-                        'group' => 'Commercial Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-
-                // Special Purpose
-
-                'shortDescription' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Short Description',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'trialLivingPossible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Trial Living Possible',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'barrierFree' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Barrier Free',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfLookedAfterApartments' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number of Looked After Apartments',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfNursingPlaces' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number of Nursing Places',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Wohnfläche',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -717,8 +490,8 @@ class RealestateType
                 'livingSpaceFrom' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Living Space From',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Wohnfläche von',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -726,164 +499,44 @@ class RealestateType
                 'livingSpaceTo' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Living Space To',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Wohnfläche bis',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'handicappedAccessible' => [
+                'numberOfRooms' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Handicapped Accessible',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Zimmerzahl',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'guestApartmentsAvailable' => [
+                'builtInKitchen' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Guest Apartments Available',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Einbauküche',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'restaurantAvailable' => [
+                'balcony' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Restaurant Available',
-                        'group' => 'Special Purpose Fields',
+                        'label' => 'Balkon/Terrasse',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'cookingFacilitiesAvailable' => [
+                'garden' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Cooking Facilities Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'ownFurniturePossible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Own Furniture Possible',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'cleaningServiceAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Cleaning Service Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'shoppingFacilitiesAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Shopping Facilities Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'security24Hours' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Security 24 Hours',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'culturalProgramAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Cultural Program Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'leisureActivitiesAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Leisure Activities Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'religiousOfferingsAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Religious Offerings Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'balconyAvailable' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Balcony Available',
-                        'group' => 'Special Purpose Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-
-                // Site Fields
-
-                'commercializationType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Commercialization Type',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'recommendedUseTypes' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Recommended Use Types',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'tenancy' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Tenancy',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'plotArea' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Plot Area',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'minDivisible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Min Divisible',
-                        'group' => 'Site Fields',
+                        'label' => 'Gartenbenutzung',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -891,8 +544,8 @@ class RealestateType
                 'courtage' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Courtage',
-                        'group' => 'Site Fields',
+                        'label' => 'Provisionspflichtig',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -900,8 +553,8 @@ class RealestateType
                 'courtageNote' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Courtage Note',
-                        'group' => 'Site Fields',
+                        'label' => 'Provisionshinweis',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -909,110 +562,21 @@ class RealestateType
                 'freeFrom' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Free From',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'shortTermConstructible' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Short Term Constructible',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'buildingPermission' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Building Permission',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'demolition' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Demolition',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'siteDevelopmentType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Site Development Type',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'siteConstructibleType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Site Constructible Type',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'grz' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'GRZ',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'gfz' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'GFZ',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'marketingType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Marketing Type',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'priceIntervalType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Price Interval Type',
-                        'group' => 'Site Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'leaseInterval' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Lease Interval',
-                        'group' => 'Site Fields',
+                        'label' => 'Frei ab',
+                        'group' => 'Miete (Rent)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
 
-                // Garage Fields
+
+                // Kaufen (Buy)
 
                 'value' => [
                     'type' => 'String',
                     'metadata' => [
                         'label' => 'Kaufpreis',
-                        'group' => 'Garage Fields',
+                        'group' => 'Kaufen (Buy)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1020,26 +584,357 @@ class RealestateType
                 'currency' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Currency',
-                        'group' => 'Garage Fields',
+                        'label' => 'Währung',
+                        'group' => 'Kaufen (Buy)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
-                'usableFloorSpace' => [
+                'marketingType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Usable Floor Space',
-                        'group' => 'Garage Fields',
+                        'label' => 'Vermarktungstyp',
+                        'group' => 'Kaufen (Buy)',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
+                'priceIntervalType' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Preisintervalltyp',
+                        'group' => 'Kaufen (Buy)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                // Haus (House)
+
+                'plotArea' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Grundstücksfläche',
+                        'group' => 'Haus (House)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'buildingType' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Gebäudetyp',
+                        'group' => 'Haus (House)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                // Gewerbeobjekte (Commercial)
+
+                'commercializationType' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Vermarktungstyp',
+                        'group' => 'Gewerbeobjekte (Commercial)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'totalFloorSpace' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Gesamtfläche',
+                        'group' => 'Gewerbeobjekte (Commercial)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'netFloorSpace' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Nettofläche',
+                        'group' => 'Gewerbeobjekte (Commercial)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'minDivisible' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Mindestteilbarkeit',
+                        'group' => 'Gewerbeobjekte (Commercial)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'additionalCosts' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Zusatzkosten',
+                        'group' => 'Gewerbeobjekte (Commercial)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                // Spezialgewerbe (Special Purpose)
+
+                'shortDescription' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Kurzbeschreibung',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'trialLivingPossible' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Probewohnen möglich',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'barrierFree' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Barrierefrei',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'numberOfLookedAfterApartments' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Anzahl betreuter Wohnungen',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'numberOfNursingPlaces' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Anzahl Pflegeplätze',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                'handicappedAccessible' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Barrierefrei',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'guestApartmentsAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Gästeapartments verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'restaurantAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Restaurant verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'cookingFacilitiesAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Kochmöglichkeiten vorhanden',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'ownFurniturePossible' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Eigene Möbel möglich',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'cleaningServiceAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Reinigungsservice verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'shoppingFacilitiesAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Einkaufsmöglichkeiten vorhanden',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'security24Hours' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Sicherheitsdienst 24 Stunden',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'culturalProgramAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Kulturprogramm verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'leisureActivitiesAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Freizeitaktivitäten verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'religiousOfferingsAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Religiöse Angebote verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'balconyAvailable' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Balkon verfügbar',
+                        'group' => 'Spezialgewerbe (Special Purpose)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                // Grundstück (Site)
+
+                'recommendedUseTypes' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Empfohlene Nutzungstypen',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'tenancy' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Pacht',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'shortTermConstructible' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Kurzfristig bebaubar',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'buildingPermission' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Baugenehmigung',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'demolition' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Abriss',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'siteDevelopmentType' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Erschließungstyp',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'siteConstructibleType' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Bebaubarkeitstyp',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'grz' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Grundflächenzahl (GRZ)',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'gfz' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Geschossflächenzahl (GFZ)',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+                'leaseInterval' => [
+                    'type' => 'String',
+                    'metadata' => [
+                        'label' => 'Pachtintervall',
+                        'group' => 'Grundstück (Site)',
+                        'filters' => ['limit'],
+                        'value' => '',
+                    ],
+                ],
+
+                // Garage
+
                 'garageType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Garage Type',
-                        'group' => 'Garage Fields',
+                        'label' => 'Garagentyp',
+                        'group' => 'Garage',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1047,8 +942,8 @@ class RealestateType
                 'lengthGarage' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Length',
-                        'group' => 'Garage Fields',
+                        'label' => 'Länge',
+                        'group' => 'Garage',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1056,8 +951,8 @@ class RealestateType
                 'widthGarage' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Width',
-                        'group' => 'Garage Fields',
+                        'label' => 'Breite',
+                        'group' => 'Garage',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1065,20 +960,20 @@ class RealestateType
                 'heightGarage' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Height',
-                        'group' => 'Garage Fields',
+                        'label' => 'Höhe',
+                        'group' => 'Garage',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
 
-                // CompulsaryAuctionFields
+                // Zwangsversteigerung
 
                 'marketValue' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Market Value',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Marktwert',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1086,8 +981,8 @@ class RealestateType
                 'lowestBid' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Lowest Bid',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Mindestgebot',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1095,8 +990,8 @@ class RealestateType
                 'recurrenceAppointment' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Recurrence Appointment',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Wiederholungstermin',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1104,8 +999,8 @@ class RealestateType
                 'dateOfAuction' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Date of Auction',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Versteigerungsdatum',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1113,8 +1008,8 @@ class RealestateType
                 'lastChangeDate' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Last Change Date',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Letztes Änderungsdatum',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1122,8 +1017,8 @@ class RealestateType
                 'cancellationDate' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Cancellation Date',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Stornierungsdatum',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1131,8 +1026,8 @@ class RealestateType
                 'recordationDate' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Recordation Date',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Eintragungsdatum',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1140,8 +1035,8 @@ class RealestateType
                 'area' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Area',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Fläche',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1149,8 +1044,8 @@ class RealestateType
                 'auctionObjectType' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Auction Object Type',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Auktionsobjekttyp',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1158,8 +1053,8 @@ class RealestateType
                 'countyCourt' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'County Court',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Amtsgericht',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1167,8 +1062,8 @@ class RealestateType
                 'fileReferenceAtCountyCourt' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'File Reference at County Court',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Aktenzeichen beim Amtsgericht',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1176,8 +1071,8 @@ class RealestateType
                 'numberOfFolio' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number of Folio',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Grundbuchblattnummer',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1185,8 +1080,8 @@ class RealestateType
                 'splittingAuction' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Splitting Auction',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Teilungsversteigerung',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1194,8 +1089,8 @@ class RealestateType
                 'owner' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Owner',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Eigentümer',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1203,20 +1098,20 @@ class RealestateType
                 'energyPerformanceCertificate' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Energy Performance Certificate',
-                        'group' => 'Compulsory Auction Fields',
+                        'label' => 'Energieausweis vorhanden',
+                        'group' => 'Zwangsversteigerung',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
 
-                // FlatShareRoomFields
+                // WG-Zimmer
 
                 'roomSize' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Room Size',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Zimmergröße',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1225,160 +1120,7 @@ class RealestateType
                     'type' => 'String',
                     'metadata' => [
                         'label' => 'Bodenbelag',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfRooms' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number of Rooms',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'apartmentType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Apartment Type',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'cellar' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Cellar',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'heatingTypeEnev2014' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Heating Type Enev2014',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'barrierFree' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Barrier Free',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'courtage' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Courtage',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'energyCertificate' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Energy Certificate',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'energySourcesEnev2014' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Energy Sources Enev2014',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'buildingEnergyRatingType' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Building Energy Rating Type',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'thermalCharacteristic' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Thermal Characteristic',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'energyConsumptionContainsWarmWater' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Energy Consumption Contains Warm Water',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'baseRent' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Base Rent',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'totalRent' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Total Rent',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'serviceCharge' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Service Charge',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'deposit' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Deposit',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'heatingCosts' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Heating Costs',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'heatingCostsInServiceCharge' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Heating Costs In Service Charge',
-                        'group' => 'FlatShareRoom Fields',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1386,8 +1128,8 @@ class RealestateType
                 'calculatedTotalRent' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Calculated Total Rent',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Berechnete Gesamtmiete',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1395,17 +1137,8 @@ class RealestateType
                 'calculatedTotalRentScope' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Calculated Total Rent Scope',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'freeFrom' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Free From',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Umfang der berechneten Gesamtmiete',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1413,8 +1146,8 @@ class RealestateType
                 'freeUntil' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Free Until',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Frei bis',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1422,8 +1155,8 @@ class RealestateType
                 'minimumTermOfLease' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Minimum Term Of Lease',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Mindestmietdauer',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1431,17 +1164,18 @@ class RealestateType
                 'totalSpace' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Total Space',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Gesamtfläche',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
                 ],
+
                 'numberOfMaleFlatMates' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number Of Male Flat Mates',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Anzahl der männlichen Mitbewohner',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1449,8 +1183,8 @@ class RealestateType
                 'numberOfFemaleFlatMates' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number Of Female Flat Mates',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Anzahl der weiblichen Mitbewohner',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1458,8 +1192,8 @@ class RealestateType
                 'ageOfFlatMatesFrom' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Age Of Flat Mates From',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Alter der Mitbewohner von',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1467,8 +1201,8 @@ class RealestateType
                 'ageOfFlatMatesTo' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Age Of Flat Mates To',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Alter der Mitbewohner bis',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1476,8 +1210,8 @@ class RealestateType
                 'ageOfRequestedFrom' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Age Of Requested From',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Gewünschtes Alter von',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1485,8 +1219,8 @@ class RealestateType
                 'ageOfRequestedTo' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Age Of Requested To',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Gewünschtes Alter bis',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1494,62 +1228,8 @@ class RealestateType
                 'numberOfRequestedFlatMates' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Number Of Requested Flat Mates',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'floor' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Floor',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfFloors' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number Of Floors',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'numberOfBathRooms' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Number Of Bath Rooms',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'balcony' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Balcony',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'garden' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Garden',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'lift' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Lift',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Anzahl der gesuchten Mitbewohner',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1557,8 +1237,8 @@ class RealestateType
                 'oven' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Oven',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Ofen',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1566,8 +1246,8 @@ class RealestateType
                 'refrigerator' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Refrigerator',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Kühlschrank',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1575,8 +1255,8 @@ class RealestateType
                 'stove' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Stove',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Herd',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1584,8 +1264,8 @@ class RealestateType
                 'dishwasher' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Dishwasher',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Geschirrspüler',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1593,8 +1273,8 @@ class RealestateType
                 'washingMachine' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Washing Machine',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Waschmaschine',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1602,8 +1282,8 @@ class RealestateType
                 'bathHasWc' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Bath Has Wc',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Bad mit WC',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1611,8 +1291,8 @@ class RealestateType
                 'bathHasShower' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Bath Has Shower',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Bad mit Dusche',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1620,26 +1300,8 @@ class RealestateType
                 'bathHasTub' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Bath Has Tub',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'guestToilet' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Guest Toilet',
-                        'group' => 'FlatShareRoom Fields',
-                        'filters' => ['limit'],
-                        'value' => '',
-                    ],
-                ],
-                'petsAllowed' => [
-                    'type' => 'String',
-                    'metadata' => [
-                        'label' => 'Pets Allowed',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Bad mit Badewanne',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1647,8 +1309,8 @@ class RealestateType
                 'internetConnection' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Internet Connection',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Internetanschluss',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1656,8 +1318,8 @@ class RealestateType
                 'smokingAllowed' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Smoking Allowed',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Rauchen erlaubt',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1665,8 +1327,8 @@ class RealestateType
                 'requestedGender' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Requested Gender',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Geschlecht des gesuchten Mitbewohners',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1674,8 +1336,8 @@ class RealestateType
                 'furnishing' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Furnishing',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Möblierung',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1683,8 +1345,8 @@ class RealestateType
                 'tvConnection' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'TV Connection',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Fernsehanschluss',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1692,8 +1354,8 @@ class RealestateType
                 'telephoneConnection' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Telephone Connection',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Telefonanschluss',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1701,8 +1363,8 @@ class RealestateType
                 'parkingSituation' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Parking Situation',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Parksituation',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
@@ -1710,8 +1372,8 @@ class RealestateType
                 'flatShareSize' => [
                     'type' => 'String',
                     'metadata' => [
-                        'label' => 'Flat Share Size',
-                        'group' => 'FlatShareRoom Fields',
+                        'label' => 'Größe der WG',
+                        'group' => 'WG-Zimmer',
                         'filters' => ['limit'],
                         'value' => '',
                     ],
