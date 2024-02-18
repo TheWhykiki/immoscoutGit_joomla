@@ -54,9 +54,7 @@
             $realestatesModel = $mvcFactory->createModel('Realestate', 'Site', ['ignore_request' => true]);
             $realestate = $realestatesModel->getItem($id);
 
-            $realestateRemapped = FieldsHelper::setFieldMappings($realestate);
-
-            return $realestateRemapped;
+            return FieldsHelper::setFieldMappings($realestate);
 
         }
 
