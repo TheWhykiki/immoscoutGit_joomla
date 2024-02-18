@@ -1,17 +1,15 @@
 <?php
 
-//
+/**
+ * @package      DigiNerds Immoscout24 Komponente
+ *
+ * @author       Christian Schuelling <info@diginerds.de>
+ * @copyright    2024 diginerds.de - All rights reserved.
+ * @license      GNU General Public License version 3 or later
+ */
+
+
 namespace Joomla\Plugin\System\Ytimmoscout\Type;
-
-use Joomla\CMS\Component\ComponentHelper;
-use Joomla\CMS\Factory;
-
-use Joomla\CMS\Router\Route;
-use Joomla\Component\Categories\Administrator\Model\CategoryModel;
-use Joomla\Component\Fields\Administrator\Model\FieldModel;
-use Joomla\String\StringHelper;
-use VmmdatabaseNamespace\Component\Vmmdatabase\Site\Model\DatasetModel;
-
 
 class RealestatesType
 {
@@ -52,138 +50,145 @@ class RealestatesType
                     'metadata' => [
                         'label'   => 'ID',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'title' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Title',
+                        'label'   => 'Titel',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'type' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Type',
+                        'label'   => 'Typ',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'externalId' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'External ID',
+                        'label'   => 'Externe ID',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'creationDate' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Creation Date',
+                        'label'   => 'Erstellungsdatum',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'modifiedDate' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Modified Date',
+                        'label'   => 'Änderungsdatum',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
+                    ],
+                ],
+                'realestateRoute' => [
+                    'type'     => 'String',
+                    'metadata' => [
+                        'label'   => 'Link Route',
+                        'filters' => ['limit'],
+                        'value'   => '', // dynamischer Wert
+                    ],
+                ],
+                'realestateUrl' => [
+                    'type'     => 'String',
+                    'metadata' => [
+                        'label'   => 'Link SEO',
+                        'filters' => ['limit'],
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'street' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Street',
+                        'label'   => 'Straße',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'houseNumber' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'House Number',
+                        'label'   => 'Hausnummer',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'zipCode' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Zip Code',
+                        'label'   => 'Postleitzahl',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'city' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'City',
+                        'label'   => 'Stadt',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'livingSpace' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Living Space',
+                        'label'   => 'Wohnfläche',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'numberOfRooms' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Number Of Rooms',
+                        'label'   => 'Anzahl der Zimmer',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'price' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Price',
+                        'label'   => 'Preis',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'currency' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Currency',
+                        'label'   => 'Währung',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'realestateState' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Real Estate State',
+                        'label'   => 'Immobilienzustand',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
-                    ],
-                ],
-                'titlePicture' => [
-                    'type'     => 'String',
-                    'metadata' => [
-                        'label'   => 'Title Picture',
-                        'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
                 'titlePictureUrl' => [
                     'type'     => 'String',
                     'metadata' => [
-                        'label'   => 'Title Picture URL',
+                        'label'   => 'URL des Titelbildes',
                         'filters' => ['limit'],
-                        'value'   => '', // Setze hier den dynamischen Wert
+                        'value'   => '', // dynamischer Wert
                     ],
                 ],
-                // Füge hier weitere Felder hinzu, wie benötigt
             ],
 
             'metadata' => [

@@ -42,6 +42,8 @@
 
             $realestatePageSize = $paramsMenu->get('realestate_pagesize', 10);
 
+            var_dump($realestatePageSize);
+
             $paramsComponent = ComponentHelper::getParams('com_vmmimmoscout');
 
             $curl = curl_init();

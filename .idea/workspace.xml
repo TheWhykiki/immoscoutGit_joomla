@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1f7a670-8a67-4143-b2ed-550661d48a65" name="Changes" comment="TEilweise aufgeräumt">
+    <list default="true" id="f1f7a670-8a67-4143-b2ed-550661d48a65" name="Changes" comment="Added Plugin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/language/de-DE/com_vmmimmoscout.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/language/de-DE/com_vmmimmoscout.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestates/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/site/tmpl/realestates/default.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,39 +25,36 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="3a1059a6-9497-46ef-b5df-612fac80c892" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2cUvDzs60WNDKNdLVH2ZUIilQbf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/whykiki/srv/git/immoscoutGit_joomla/src/language/de-DE",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/whykiki/srv/git/immoscoutGit_joomla/src/language/de-DE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/language/de-DE" />

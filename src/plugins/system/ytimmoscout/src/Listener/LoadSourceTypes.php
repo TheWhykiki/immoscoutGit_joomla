@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * @package      DigiNerds Immoscout24 Komponente
+ *
+ * @author       Christian Schuelling <info@diginerds.de>
+ * @copyright    2024 diginerds.de - All rights reserved.
+ * @license      GNU General Public License version 3 or later
+ */
+
+
 namespace Joomla\Plugin\System\Ytimmoscout\Listener;
 
 use Joomla\Plugin\System\Ytimmoscout\Type\RealestatesQueryType;

@@ -20,12 +20,16 @@
     $menu   = Factory::getApplication()->getMenu()->getActive();
     $Itemid = $menu->id;
 
-    echo '<pre>';
-    // var_dump($this->items);
-    echo '</pre>';
+
 
     foreach ($this->items as $item)
     {
+
+        /*
+        echo '<pre>';
+        var_dump($item);
+        echo '</pre>';
+        */
 
         $route = RouteHelper::getRealestateRoute($item->{'@id'});
         $url    = Route::_('index.php?option=com_vmmimmoscout&view=realestate&realestateID=' . (int) $item->{'@id'}. '&Itemid=' . $Itemid);

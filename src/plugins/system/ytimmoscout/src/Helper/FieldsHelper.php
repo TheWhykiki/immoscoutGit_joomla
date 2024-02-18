@@ -162,9 +162,6 @@ class FieldsHelper
             unset($realestateRemapped['energyCertificate']);
         }
 
-        echo '<pre>';
-        var_dump($realestateRemapped);
-        echo '</pre>';
 
         return $realestateRemapped;
     }
