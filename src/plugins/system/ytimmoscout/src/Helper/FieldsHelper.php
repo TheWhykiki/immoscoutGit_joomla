@@ -4,267 +4,167 @@ namespace Joomla\Plugin\System\Ytimmoscout\Helper;
 
 
 use Joomla\CMS\Document\Document;
+use Joomla\CMS\Language\Text;
 
 class FieldsHelper
 {
     public static function setFieldMappings($realestate)
     {
+
+        $realestateProperties = get_object_vars($realestate);
+        $realestateObjectKeys = array_keys($realestateProperties);
+
+
+        /* ---------- */
+        /* Remap all object keys to a new array */
+        /* ---------- */
+
         $realestateRemapped = [];
 
-        $realestateRemapped[] = [
-                'id' => $realestate->{'@id'},
-                'type' => $realestate->realestateType,
-                'title' => $realestate->title,
-                'externalId' => $realestate->externalId,
-                'creationDate' => $realestate->{'creationDate'},
-                'modifiedDate' => $realestate->{'lastModificationDate'},
-                'street' => $realestate->address->street,
-                'houseNumber' => $realestate->address->houseNumber,
-                'zipCode' => $realestate->address->postcode,
-                'city' => $realestate->address->city,
-                'lat' => $realestate->address->wgs84Coordinate->latitude,
-                'lng' => $realestate->address->wgs84Coordinate->longitude,
-                'latlng' => $realestate->address->wgs84Coordinate->latitude . ',' . $realestate->address->wgs84Coordinate->longitude,
-        ];
+        foreach ($realestateObjectKeys as $key) {
+            if(str_contains('@', $key)) {
+                $realestateRemapped[$key] = $realestate->{$key};
+            }
+            $realestateRemapped[$key] = $realestate->{$key};
+        }
 
-        if ($realestate->realestateType === 'apartmentRent' || $realestate->realestateType === 'apartmentBuy' ) {
 
-            $realestateRemapped[] = [
-                'groupNumber' => $realestate->groupNumber,
-                'descriptionNote' => $realestate->descriptionNote,
-                'furnishingNote' => $realestate->furnishingNote,
-                'locationNote' => $realestate->locationNote,
-                'otherNote' => $realestate->otherNote,
-                'lift' => $realestate->lift,
-                'energyCertificateCreationDate' => $realestate->energyCertificate->energyCertificateCreationDate,
-                'energyEfficiencyClass' => $realestate->energyCertificate->energyEfficiencyClass,
-                'cellar' => $realestate->cellar,
-                'handicappedAccessible' => $realestate->handicappedAccessible,
-                'condition' => $realestate->condition,
-                'constructionYear' => $realestate->constructionYear,
-                'freeFrom' => $realestate->freeFrom,
-                'heatingType' => $realestate->heatingType,
-                'heatingTypeEnev2014' => $realestate->heatingTypeEnev2014,
-                'energySourcesEnev2014' => $realestate->energySourcesEnev2014->energySourceEnev2014,
-                'buildingEnergyRatingType' => $realestate->buildingEnergyRatingType,
-                'thermalCharacteristic' => $realestate->thermalCharacteristic,
-                'energyConsumptionContainsWarmWater' => $realestate->energyConsumptionContainsWarmWater,
-                'guestToilet' => $realestate->guestToilet,
-                'baseRent' => $realestate->baseRent,
-                'totalRent' => $realestate->totalRent,
-                'serviceCharge' => $realestate->serviceCharge,
-                'deposit' => $realestate->deposit,
-                'heatingCostsInServiceCharge' => $realestate->heatingCostsInServiceCharge,
-                'petsAllowed' => $realestate->petsAllowed,
-                'useAsFlatshareRoom' => $realestate->useAsFlatshareRoom,
-                'livingSpace' => $realestate->livingSpace,
-                'numberOfRooms' => $realestate->numberOfRooms,
-                'energyPerformanceCertificate' => $realestate->energyPerformanceCertificate,
-                'builtInKitchen' => $realestate->builtInKitchen,
-                'balcony' => $realestate->balcony,
-                'garden' => $realestate->garden,
-                'courtage' => $realestate->courtage->hasCourtage,
-                'certificateOfEligibilityNeeded' => $realestate->certificateOfEligibilityNeeded,
-                'realestateState' => $realestate->realEstateState,
-            ];
+        /* ---------- */
+        /* Remap Translatable String Fields */
+        /* ---------- */
 
-            foreach ($realestate->firingTypes as $firingType) {
-                $realestateRemapped[0]['firingTypes'] = $firingType;
+        $realestateRemapped['heatingType'] = Text::_('COM_YTIMMOSCOUT_HEATING_TYPE_' . $realestate->heatingType);
+        $realestateRemapped['heatingTypeEnev2014'] = Text::_('COM_YTIMMOSCOUT_HEATING_TYPE_' . $realestate->heatingTypeEnev2014);
+        $realestateRemapped['apartmentType'] = Text::_('COM_YTIMMOSCOUT_APARTMENT_TYPE_' . $realestate->apartmentType);
+        $realestateRemapped['condition'] = Text::_('COM_YTIMMOSCOUT_CONDITION_' . $realestate->condition);
+        $realestateRemapped['buildingEnergyRatingType'] = Text::_('COM_YTIMMOSCOUT_ENERGY_CONSUMPTION_' . $realestate->buildingEnergyRatingType);
+
+        /* ---------- */
+        /* Remap Boolean Fields */
+        /* ---------- */
+
+        foreach ($realestateRemapped as $key => $value) {
+            if($value === 'YES' || $value == 'true') {
+                $realestateRemapped[$key] = Text::_('COM_YTIMMOSCOUT_YES');
+            }
+            if($value === 'NO' || $value == 'false') {
+                $realestateRemapped[$key] =  Text::_('COM_YTIMMOSCOUT_NO');
+            }
+            if($value === 'NOT_APPLICABLE') {
+                $realestateRemapped[$key] =  Text::_('COM_YTIMMOSCOUT_NOT_APPLICABLE');
+            }
+            if($value === 'NOT_AVAILABLE') {
+                $realestateRemapped[$key] =  Text::_('COM_YTIMMOSCOUT_NOT_AVAILABLE');
+            }
+            if($value === 'NO_INFORMATION') {
+                $realestateRemapped[$key] =  Text::_('COM_YTIMMOSCOUT_NO_INFORMATION');
             }
         }
 
 
+        /* ---------- */
+        /* Remap address data to new values */
+        /* ---------- */
 
-        if ($realestate->realestateType === 'houseBuy' || $realestate->realestateType === 'houseRent' ) {
+        $realestateRemapped['street'] = $realestate->address->street;
+        $realestateRemapped['houseNumber'] = $realestate->address->houseNumber;
+        $realestateRemapped['zipCode'] = $realestate->address->postcode;
+        $realestateRemapped['city'] = $realestate->address->city;
+        $realestateRemapped['lat'] = $realestate->address->wgs84Coordinate->latitude;
+        $realestateRemapped['lng'] = $realestate->address->wgs84Coordinate->longitude;
+        $realestateRemapped['latlng'] = $realestate->address->wgs84Coordinate->latitude . ',' . $realestate->address->wgs84Coordinate->longitude;
+        unset($realestateRemapped['address']);
 
-            $realestateRemapped[] = [
-                'groupNumber' => $realestate->groupNumber,
-                'descriptionNote' => $realestate->descriptionNote,
-                'furnishingNote' => $realestate->furnishingNote,
-                'locationNote' => $realestate->locationNote,
-                'otherNote' => $realestate->otherNote,
-                'lift' => $realestate->lift,
-                'energyCertificateCreationDate' => $realestate->energyCertificate->energyCertificateCreationDate,
-                'energyEfficiencyClass' => $realestate->energyCertificate->energyEfficiencyClass,
-                'cellar' => $realestate->cellar,
-                'handicappedAccessible' => $realestate->handicappedAccessible,
-                'condition' => $realestate->condition,
-                'constructionYear' => $realestate->constructionYear,
-                'freeFrom' => $realestate->freeFrom,
-                'heatingType' => $realestate->heatingType,
-                'heatingTypeEnev2014' => $realestate->heatingTypeEnev2014,
-                'energySourcesEnev2014' => $realestate->energySourcesEnev2014->energySourceEnev2014,
-                'buildingEnergyRatingType' => $realestate->buildingEnergyRatingType,
-                'thermalCharacteristic' => $realestate->thermalCharacteristic,
-                'energyConsumptionContainsWarmWater' => $realestate->energyConsumptionContainsWarmWater,
-                'guestToilet' => $realestate->guestToilet,
-                'baseRent' => $realestate->baseRent,
-                'totalRent' => $realestate->totalRent,
-                'serviceCharge' => $realestate->serviceCharge,
-                'deposit' => $realestate->deposit,
-                'heatingCostsInServiceCharge' => $realestate->heatingCostsInServiceCharge,
-                'petsAllowed' => $realestate->petsAllowed,
-                'useAsFlatshareRoom' => $realestate->useAsFlatshareRoom,
-                'livingSpace' => $realestate->livingSpace,
-                'numberOfRooms' => $realestate->numberOfRooms,
-                'energyPerformanceCertificate' => $realestate->energyPerformanceCertificate,
-                'builtInKitchen' => $realestate->builtInKitchen,
-                'balcony' => $realestate->balcony,
-                'garden' => $realestate->garden,
-                'courtage' => $realestate->courtage->hasCourtage,
-                'certificateOfEligibilityNeeded' => $realestate->certificateOfEligibilityNeeded,
-                'price' => $realestate->price->value,
-                'currency' => $realestate->price->currency,
-                'realestateState' => $realestate->realEstateState,
-                'titlePicture' => $realestate->titlePicture,
-                'titlePictureUrl' => $realestate->titlePicture->urls[0]->url[0]->{'@href'},
-            ];
 
-            foreach ($realestate->firingTypes as $firingType) {
-                $realestateRemapped[0]['firingTypes'] = $firingType;
-            }
+        /* ---------- */
+        /* Remap Courtage data to new values */
+        /* ---------- */
+
+        if($realestate->courtage->hasCourtage === 'YES')
+        {
+            $realestateRemapped['courtage'] = $realestate->courtage->courtage ?? '';
+            $realestateRemapped['courtageNote'] = $realestate->courtage->courtageNote ?? '';
         }
 
 
-        if ($realestate->realestateType === 'livingRentSite' || $realestate->realestateType === 'livingBuySite' ) {
+        /* ---------- */
+        /* Remap Energy data to new values, generate comma separated string */
+        /* ---------- */
 
-            $realestateRemapped[] = [
-                'groupNumber' => $realestate->groupNumber,
-                'descriptionNote' => $realestate->descriptionNote,
-                'locationNote' => $realestate->locationNote,
-                'otherNote' => $realestate->otherNote,
+        if (isset($realestate->energySourcesEnev2014) && is_object($realestate->energySourcesEnev2014)) {
 
-                // Gemeinsame Felder für beide Immobilienarten
-                'freeFrom' => $realestate->freeFrom,
-                'hasCourtage' => $realestate->hasCourtage,
-                'currency' => $realestate->currency,
-                'creationDate' => $realestate->creationDate,
-                'LastModificationDate' => $realestate->LastModificationDate,
-                'marketingType' => $realestate->marketingType,
-                'priceIntervalType' => $realestate->priceIntervalType,
+            if (isset($realestate->energySourcesEnev2014->energySourceEnev2014)) {
 
-                // Felder spezifisch für livingRentSite
-                'tenancy' => $realestate->tenancy,
-                'value' => $realestate->value,
-                'plotArea' => $realestate->plotArea,
-                'shortTermConstructible' => $realestate->shortTermConstructible,
-                'buildingPermission' => $realestate->buildingPermission,
-                'demolition' => $realestate->demolition,
-                'siteDevelopmentType' => $realestate->siteDevelopmentType,
-                'siteConstructibleType' => $realestate->siteConstructibleType,
-                'grz' => $realestate->grz,
-                'gfz' => $realestate->gfz,
-                'latitude' => $realestate->latitude,
-                'longitude' => $realestate->longitude,
+                $energySources = $realestate->energySourcesEnev2014->energySourceEnev2014;
 
-                // Felder spezifisch für livingBuySite
-                'recommendedUseTypes' => $realestate->recommendedUseTypes,
-            ];
-
-
-            foreach ($realestate->firingTypes as $firingType) {
-                $realestateRemapped[0]['firingTypes'] = $firingType;
+                if (is_array($energySources)) {
+                    $maxValues = count($energySources);
+                    $counter = 0;
+                    $energySourcesEnev2014 = '';
+                    foreach ($energySources as $value) {
+                        $counter++;
+                        $energySourcesEnev2014 .= Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $value) . ', ';
+                        if($counter === $maxValues) {
+                            $energySourcesEnev2014 .= Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $value);
+                        }
+                    }
+                } else {
+                    $energySourcesEnev2014 = Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $energySources);
+                }
             }
-        }
 
-        if ($realestate->realestateType === 'garageRent' || $realestate->realestateType === 'garageBuy' ) {
-
-            $realestateRemapped[] = [
-                'groupNumber' => $realestate->groupNumber,
-                'descriptionNote' => $realestate->descriptionNote,
-                'locationNote' => $realestate->locationNote,
-                'otherNote' => $realestate->otherNote,
-
-                // Gemeinsame Felder für beide Immobilienarten
-                'freeFrom' => $realestate->freeFrom,
-                'hasCourtage' => $realestate->hasCourtage,
-                'currency' => $realestate->currency,
-                'creationDate' => $realestate->creationDate,
-                'LastModificationDate' => $realestate->LastModificationDate,
-                'marketingType' => $realestate->marketingType,
-                'priceIntervalType' => $realestate->priceIntervalType,
-
-                // Felder spezifisch für livingRentSite
-                'tenancy' => $realestate->tenancy,
-                'value' => $realestate->value,
-                'plotArea' => $realestate->plotArea,
-                'shortTermConstructible' => $realestate->shortTermConstructible,
-                'buildingPermission' => $realestate->buildingPermission,
-                'demolition' => $realestate->demolition,
-                'siteDevelopmentType' => $realestate->siteDevelopmentType,
-                'siteConstructibleType' => $realestate->siteConstructibleType,
-                'grz' => $realestate->grz,
-                'gfz' => $realestate->gfz,
-                'latitude' => $realestate->latitude,
-                'longitude' => $realestate->longitude,
-
-                // Felder spezifisch für livingBuySite
-                'recommendedUseTypes' => $realestate->recommendedUseTypes,
-            ];
-
-
-            foreach ($realestate->firingTypes as $firingType) {
-                $realestateRemapped[0]['firingTypes'] = $firingType;
-            }
+            $realestateRemapped['energySourcesEnev2014'] = $energySourcesEnev2014;
         }
 
 
-        if ($realestate->realestateType === 'garageRent' || $realestate->realestateType === 'garageBuy') {
+        /* ---------- */
+        /* Remap Firing data to new values, generate comma separated string */
+        /* ---------- */
 
-            $realestateRemapped[] = [
-                'groupNumber' => $realestate->groupNumber,
-                'descriptionNote' => $realestate->descriptionNote,
-                'locationNote' => $realestate->locationNote,
-                'otherNote' => $realestate->otherNote,
-                'freeFrom' => $realestate->freeFrom,
-                'hasCourtage' => $realestate->hasCourtage,
-                'currency' => $realestate->currency,
-                'creationDate' => $realestate->creationDate,
-                'LastModificationDate' => $realestate->LastModificationDate,
-                'marketingType' => $realestate->marketingType,
-                'priceIntervalType' => $realestate->priceIntervalType,
-                'latitude' => $realestate->latitude,
-                'longitude' => $realestate->longitude,
-            ];
+        if (isset($realestate->firingTypes)) {
 
-            if ($realestate->realestateType === 'garageRent') {
-                $realestateRemapped[0] += [
-                    'tenancy' => $realestate->tenancy,
-                    'value' => $realestate->value,
-                    'plotArea' => $realestate->plotArea,
-                    'shortTermConstructible' => $realestate->shortTermConstructible,
-                    'buildingPermission' => $realestate->buildingPermission,
-                    'demolition' => $realestate->demolition,
-                    'siteDevelopmentType' => $realestate->siteDevelopmentType,
-                    'siteConstructibleType' => $realestate->siteConstructibleType,
-                    'grz' => $realestate->grz,
-                    'gfz' => $realestate->gfz,
-                ];
+            if (isset($realestate->firingTypes[0]->firingType)) {
+
+                $firingTypes = $realestate->firingTypes[0]->firingType;
+                if (is_array($firingTypes)) {
+                    $maxValues = count($firingTypes);
+                    $counter = 0;
+                    $firingTypeLabels = '';
+                    foreach ($firingTypes as $value) {
+                        $counter++;
+                        $firingTypeLabels .= Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $value) . ', ';
+                        if($counter === $maxValues) {
+                            $firingTypeLabels .= Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $value);
+                        }
+                    }
+                } else {
+                    $firingTypeLabels = Text::_('COM_YTIMMOSCOUT_ENERGY_SOURCES_ENEV_2014_' . $firingTypes);
+                }
+
             }
 
-            if ($realestate->realestateType === 'garageBuy') {
-                $realestateRemapped[0] += [
-                    'furnishingNote' => $realestate->furnishingNote,
-                    'additionalCosts' => $realestate->additionalCosts,
-                    'usableFloorSpace' => $realestate->usableFloorSpace,
-                    'freeUntil' => $realestate->freeUntil,
-                    'garageType' => $realestate->garageType,
-                    'constructionYear' => $realestate->constructionYear,
-                    'constructionYearUnknown' => $realestate->constructionYearUnknown,
-                    'lengthGarage' => $realestate->lengthGarage,
-                    'widthGarage' => $realestate->widthGarage,
-                    'heightGarage' => $realestate->heightGarage,
-                    'condition' => $realestate->condition,
-                    'lastRefurbishment' => $realestate->lastRefurbishment,
-                ];
-            }
-
-            foreach ($realestate->firingTypes as $firingType) {
-                $realestateRemapped[0]['firingTypes'] = $firingType;
-            }
+            $realestateRemapped['firingTypes'] = $firingTypeLabels;
         }
 
 
+        /* ---------- */
+        /* Remap Energy Certificate data to new values */
+        /* ---------- */
+
+        if (isset($realestate->energyCertificate)) {
+
+            if (isset($realestate->energyCertificate->energyCertificateCreationDate)) {
+                $realestateRemapped['energyCertificateCreationDate'] = $realestate->energyCertificate->energyCertificateCreationDate;
+            }
+            if (isset($realestate->energyCertificate->energyEfficiencyClass)) {
+                $realestateRemapped['energyEfficiencyClass'] = $realestate->energyCertificate->energyEfficiencyClass;
+            }
+            unset($realestateRemapped['energyCertificate']);
+        }
+
+        echo '<pre>';
+        var_dump($realestateRemapped);
+        echo '</pre>';
 
         return $realestateRemapped;
     }
