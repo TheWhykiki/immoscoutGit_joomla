@@ -4,15 +4,87 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1f7a670-8a67-4143-b2ed-550661d48a65" name="Changes" comment="Added Plugin">
+    <list default="true" id="f1f7a670-8a67-4143-b2ed-550661d48a65" name="Changes" comment="Workspace">
+      <change afterPath="$PROJECT_DIR$/__RoboFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/scss/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/scss/custom.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/scss/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestates/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/site/tmpl/realestates/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/access.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/access.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/forms/filter_realestates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/forms/filter_realestates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/forms/realestate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/forms/realestate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/misc/changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/misc/changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/misc/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/misc/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/services/provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/services/provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/install.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/install.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/uninstall.mysql.utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/uninstall.mysql.utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/updates/mysql/0.0.1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/updates/mysql/0.0.1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/sql/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/sql/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Controller/DisplayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Controller/DisplayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Controller/RealestateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Controller/RealestateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Controller/RealestatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Controller/RealestatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Extension/VmmimmoscoutComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Extension/VmmimmoscoutComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Field/BlankField.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Field/BlankField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Field/Modal/RealestateField.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Field/Modal/RealestateField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Helper/VmmimmoscoutHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Helper/VmmimmoscoutHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Model/DashboardModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Model/DashboardModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Model/RealestateModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Model/RealestateModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Model/RealestatesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Model/RealestatesModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Service/HTML/AdministratorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Service/HTML/AdministratorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Service/HTML/Icon.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Service/HTML/Icon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/Table/RealestateTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/Table/RealestateTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/src/View/Dashboard/HtmlView.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/src/View/Dashboard/HtmlView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/tmpl/dashboard/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/tmpl/dashboard/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/administrator/vmmimmoscout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout/vmmimmoscout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/layouts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/images/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/css/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/images/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/joomla.asset.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/joomla.asset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/js/admin-realestates-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/js/admin-realestates-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/media/scss/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/js/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/language/en-GB/en-GB.plg_system_ytcontact.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/language/en-GB/en-GB.plg_system_ytcontact.sys.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/realestate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Alle FelderImmoscout.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Helper/FieldsHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/LoadSourceTypes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/SourceListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Listener/TemplateListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateQueryType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestateType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesQueryType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/Type/RealestatesType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/fieldsHelper.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/src/fieldsHelperChatGPT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system/ytimmoscout/ytimmoscout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/forms/filter_realestates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/forms/filter_realestates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/helpers/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/helpers/route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/media/com_vmmimmoscout/scss/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Controller/DisplayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Controller/DisplayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Controller/RealestateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Controller/RealestateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Dispatcher/Dispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Dispatcher/Dispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Helper/MailerHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Helper/MailerHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Helper/RouteHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Helper/RouteHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Helper/VmmimmoscoutHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Helper/VmmimmoscoutHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Model/RealestateModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Model/RealestateModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Model/RealestatesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Model/RealestatesModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Service/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Service/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/Service/RouterNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Service/RouterNew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/View/Realestate/HtmlView.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/View/Realestate/HtmlView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/src/View/Realestates/HtmlView.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/src/View/Realestates/HtmlView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestate/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/tmpl/realestate/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestate/default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/tmpl/realestate/default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestates/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/tmpl/realestates/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestates/default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/tmpl/realestates/default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/site/tmpl/realestates/default_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/com_vmmimmoscout/tmpl/realestates/default_items.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +100,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -38,26 +111,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/whykiki/srv/git/immoscoutGit_joomla/src/language/de-DE&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/whykiki/srv/git/immoscoutGit_joomla/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/language/de-DE" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/com_vmmimmoscout" />
+      <recent name="$PROJECT_DIR$/src/media/com_vmmimmoscout" />
+      <recent name="$PROJECT_DIR$/src/administrator/components/com_vmmimmoscout" />
+      <recent name="$PROJECT_DIR$/src/administrator/components" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -78,7 +159,8 @@
       <workItem from="1708178856838" duration="765000" />
       <workItem from="1708185996113" duration="996000" />
       <workItem from="1708195007924" duration="660000" />
-      <workItem from="1708195826997" duration="3524000" />
+      <workItem from="1708195826997" duration="5088000" />
+      <workItem from="1708286290046" duration="8978000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1708193792720</created>
@@ -143,7 +225,47 @@
       <option name="project" value="LOCAL" />
       <updated>1708208140341</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Felder / Array aufgweräumt und übersetzt">
+      <option name="closed" value="true" />
+      <created>1708215165679</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708215165679</updated>
+    </task>
+    <task id="LOCAL-00010" summary="FieldsHeklper eingebaut und returned">
+      <option name="closed" value="true" />
+      <created>1708215213188</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708215213188</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Remapping gestartet, weiter aufbauen">
+      <option name="closed" value="true" />
+      <created>1708215250099</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708215250099</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Immoscout Translations erweitert">
+      <option name="closed" value="true" />
+      <created>1708215264511</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708215264511</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Workspace">
+      <option name="closed" value="true" />
+      <created>1708215349367</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708215349367</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +289,27 @@
     <MESSAGE value="realestateTypes eingebaut als Schleife" />
     <MESSAGE value="var_dump entfernt" />
     <MESSAGE value="TEilweise aufgeräumt" />
-    <option name="LAST_COMMIT_MESSAGE" value="TEilweise aufgeräumt" />
+    <MESSAGE value="Felder / Array aufgweräumt und übersetzt" />
+    <MESSAGE value="FieldsHeklper eingebaut und returned" />
+    <MESSAGE value="Remapping gestartet, weiter aufbauen" />
+    <MESSAGE value="Immoscout Translations erweitert" />
+    <MESSAGE value="Workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Service/Router.php</url>
+          <line>71</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/components/com_vmmimmoscout/src/Service/Router.php</url>
+          <line>103</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
