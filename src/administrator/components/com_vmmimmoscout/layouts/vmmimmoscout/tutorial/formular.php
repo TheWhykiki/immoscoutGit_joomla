@@ -88,7 +88,7 @@
 
             <script type="module">
                 import { JoomlaEditor } from 'editor-api';
-                import { markLinesInEditor, markLines } from '/media/com_vmmimmoscout/js/codemirror/codemirror_immo.js';
+                import { markLinesInEditor } from '/media/com_vmmimmoscout/js/codemirror/codemirror_immo.js';
 
                 document.addEventListener('DOMContentLoaded', function() {
                     console.log('[default.php] DOMContentLoaded event fired.');

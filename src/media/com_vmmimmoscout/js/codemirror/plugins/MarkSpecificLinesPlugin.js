@@ -1,25 +1,39 @@
 // MarkSpecificLinesPlugin.js
 import { Decoration, ViewPlugin } from "../../../../../../media/vendor/codemirror/js/codemirror-view";
 
-// Definiere einen Zustandseffekt, um Zeilen hinzuzufügen, die markiert werden sollen
-const addMarkedLines = StateEffect.define({map: (value, mapping) => ({from: mapping.mapPos(value.from), to: mapping.mapPos(value.to)})});
+export class MarkSpecificLinesPlugin {
+    static create(view, linesToMark) {
+        // Initialisiere die Dekorationen, wenn das Plugin erstellt wird
+        const decorations = this.createDecorations(view, linesToMark);
+        console.log('[MarkSpecificLinesPlugin] Plugin created, linesToMark:', linesToMark, decorations);
 
-// Definiere ein Zustandsfeld, um die markierten Zeilen zu speichern
-const MarkSpecificLinesPlugin = StateField.define({
-    create() {
-        return Decoration.none;
-    },
-    update(markedLines, tr) {
-        markedLines = markedLines.map(tr.changes);
-        for (let effect of tr.effects) {
-            if (effect.is(addMarkedLines)) {
-                const {from, to} = effect.value;
-                markedLines = markedLines.update({add: [Decoration.line({class: "cm-markedLine"}).range(from, to)]});
+        // Definiere das Verhalten des Plugins
+        return ViewPlugin.fromClass(class {
+            constructor(view) {
+                this.decorations = decorations;
+                console.log('[MarkSpecificLinesPlugin] Constructor called, initial decorations:', this.decorations);
             }
-        }
-        return markedLines;
-    },
-    provide: f => EditorView.decorations.from(f)
-});
 
-const markedLineDecoration = Decoration.line({class: "cm-markedLine"});
+            update(update) {
+                if (update.docChanged || update.viewportChanged) {
+                    this.decorations = MarkSpecificLinesPlugin.createDecorations(update.view, linesToMark);
+                    console.log('[MarkSpecificLinesPlugin] Update called, decorations updated:', this.decorations);
+                }
+            }
+        }, {
+            decorations: v => v.decorations
+        });
+    }
+
+    static createDecorations(view, linesToMark) {
+        let decorations = [];
+        console.log(`[MarkSpecificLinesPlugin] Creating decorations for lines:`, linesToMark);
+        for (let lineNum of linesToMark) {
+            const lineDecoration = Decoration.line({ class: 'markedLine' });
+            const line = view.state.doc.line(lineNum + 1); // Get the actual line
+            decorations.push(lineDecoration.range(line.from));
+            console.log(`[MarkSpecificLinesPlugin] Decoration for line ${lineNum + 1} created:`, line.from);
+        }
+        return Decoration.set(decorations);
+    }
+}
