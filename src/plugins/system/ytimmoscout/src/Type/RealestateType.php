@@ -199,6 +199,7 @@ class RealestateType
                     'type' => 'String', // or Date depending on how you want to handle dates
                     'metadata' => [
                         'label' => 'Expose-Erstellungsdatum',
+                        'filters' => ['date'],
                         'value' => '',
                     ],
                 ],
@@ -206,6 +207,7 @@ class RealestateType
                     'type' => 'String', // or Date
                     'metadata' => [
                         'label' => 'Expose-Änderungsdatum',
+                        'filters' => ['date'],
                         'value' => '',
                     ],
                 ],

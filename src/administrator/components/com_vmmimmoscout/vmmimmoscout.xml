@@ -60,7 +60,9 @@
 		<submenu>
 			<menu view="dashboard">
                 COM_VMMIMMOSCOUT_SUBMENU_DASHBOARD
-
+            </menu>
+			<menu view="help">
+                COM_VMMIMMOSCOUT_SUBMENU_HELP
             </menu>
 
 		</submenu>
@@ -69,12 +71,13 @@
 			<filename>access.xml</filename>
 			<filename>config.xml</filename>
 			<filename>vmmimmoscout.xml</filename>
-			<folder>sql</folder>
-            <folder>forms</folder>
+			<folder>forms</folder>
+			<folder>layouts</folder>
+			<folder>misc</folder>
             <folder>services</folder>
+			<folder>sql</folder>
 			<folder>src</folder>
 			<folder>tmpl</folder>
-			<folder>misc</folder>
 		</files>
 
 		<languages folder="administrator/language">

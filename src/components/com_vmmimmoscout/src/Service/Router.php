@@ -73,7 +73,8 @@ class Router extends RouterView
         {
             if($query['view'] !== 'realestates')
             {
-                $segments[] = $query['view'];
+                //$segments[] = $query['view'];
+                $segments[] = 'exposee';
             }
 
             unset($query['view']);
@@ -103,10 +104,22 @@ class Router extends RouterView
     {
         $vars = array();
 
+        /*
         if($segments[0] !== 'realestates')
         {
             $vars['view'] = $segments[0];
             $vars['realestateID'] = (int) $segments[1];
+        }
+        */
+
+        if($segments[0] !== 'realestates')
+        {
+            $vars['view'] = $segments[0];
+            $vars['realestateID'] = (int) $segments[1];
+            if($segments[0] === 'exposee')
+            {
+                $vars['view'] = 'realestate';
+            }
         }
 
         $segments = [];

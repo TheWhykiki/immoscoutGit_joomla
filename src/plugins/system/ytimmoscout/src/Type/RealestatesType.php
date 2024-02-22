@@ -81,7 +81,7 @@ class RealestatesType
                     'type'     => 'String',
                     'metadata' => [
                         'label'   => 'Erstellungsdatum',
-                        'filters' => ['limit'],
+                        'filters' => ['date'],
                         'value'   => '', // dynamischer Wert
                     ],
                 ],
@@ -89,7 +89,7 @@ class RealestatesType
                     'type'     => 'String',
                     'metadata' => [
                         'label'   => 'Änderungsdatum',
-                        'filters' => ['limit'],
+                        'filters' => ['date'],
                         'value'   => '', // dynamischer Wert
                     ],
                 ],

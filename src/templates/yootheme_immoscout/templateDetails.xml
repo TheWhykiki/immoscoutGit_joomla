@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" client="site">
+<name>yootheme_immoscout</name>
+<version>1.0</version>
+<creationDate>February 2024</creationDate>
+<author>whykiki</author>
+<positions>
+
+</positions>
+<config>
+   <fields>
+
+   </fields>
+</config>
+<files>
+    <filename>templateDetails.xml</filename>
+    <folder>html</folder>
+</files>
+<parent>yootheme</parent>
+</extension>

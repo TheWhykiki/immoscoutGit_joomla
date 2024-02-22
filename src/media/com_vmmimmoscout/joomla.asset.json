@@ -5,7 +5,7 @@
   "description": "Joomla CMS",
   "license": "GPL-2.0-or-later",
   "assets": [
-	{
+    {
       "name": "com_vmmimmoscout.script",
       "type": "script",
       "uri": "com_vmmimmoscout/script.js"
@@ -17,6 +17,18 @@
       "attributes": {
         "type": "module"
       }
+    },
+    {
+      "name": "webcomponent.codemirror_custom",
+      "type": "script",
+      "uri": "com_vmmimmoscout/codemirror_custom.js",
+      "dependencies": [
+        "codemirror"
+      ],
+      "attributes": {
+        "type": "module"
+      },
+      "version": "f75184"
     }
   ]
 }
